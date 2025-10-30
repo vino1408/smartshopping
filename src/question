@@ -1,0 +1,41 @@
+Smart Shopping
+Problem Description:
+You are given an array of N integers representing the prices of items in a shop.
+There is a special discount offer that applies as follows:
+You can buy K items together as a group.
+For each group of K items, the most expensive item among them is free (its cost is waived off).
+You can form multiple groups as long as there are enough items left to make a group of K.
+Your task is to find and return the total cost you need to pay after applying this discount offer optimally.
+Input Specification:
+input1: An integer N representing the number of items.
+input2: An integer K representing the number of items per discount group.
+input3: An integer array of size N representing the prices of the items.
+Output Specification:
+Return an integer value representing the minimum total cost achievable after applying the discount.
+Example 1:
+input1: 5
+input2: 3
+input3: [5, 7, 10, 3, 2]
+Explanation:
+Sort prices in descending order → [10, 7, 5, 3, 2]
+Group 1 → (10, 7, 5) → most expensive = 10 → free → pay 7 + 5 = 12
+Group 2 → (3, 2) → less than K items, no free item → pay 3 + 2 = 5
+Total cost = 12 + 5 = 17
+Output:
+17
+Example 2:
+input1: 6
+input2: 2
+input3: [4, 8, 6, 2, 3, 7]
+Explanation:
+Sort descending → [8, 7, 6, 4, 3, 2]
+Group 1 → (8, 7) → free = 8 → pay 7
+Group 2 → (6, 4) → free = 6 → pay 4
+Group 3 → (3, 2) → free = 3 → pay 2
+Total cost = 7 + 4 + 2 = 13
+Output:
+13
+Constraints:
+1 ≤ N ≤ 100000
+1 ≤ K ≤ N
+1 ≤ price[i] ≤ 1000000
